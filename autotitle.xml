@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="plugin" group="content" method="upgrade">
+    <name>plg_content_autotitle</name>
+    <author>Adarsh Dubey</author>
+    <creationDate>2026-02-18</creationDate>
+    <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+    <version>1.0.1</version>
+    <description>Sets article title automatically via AJAX for GSoC Test Task.</description>
+
+    <namespace path="src">Adarsh\Plugin\Content\Autotitle</namespace>
+
+    <files>
+        <filename plugin="autotitle">autotitle.xml</filename>
+        <folder>services</folder>
+        <folder>src</folder>
+    </files>
+
+    <media destination="plg_content_autotitle" folder="media">
+        <folder>js</folder>
+    </media>
+
+    <config>
+        <fields name="params">
+            <fieldset name="basic">
+                <field
+                    name="default_text"
+                    type="text"
+                    label="Default Title Text"
+                    description="Text to automatically set as the title for new articles."
+                />
+            </fieldset>
+        </fields>
+    </config>
+</extension>
